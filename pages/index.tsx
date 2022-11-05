@@ -13,6 +13,7 @@ import { fetchSocials } from "../utils/fetchSocials";
 import About from "../components/About";
 import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
+import Projects from "../components/Projects";
 
 type Props = {
   pageInfo: PageInfo;
@@ -56,7 +57,9 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       </section>
 
       {/* Projects */}
-
+      <section id="projects" className="snap-start">
+        <Projects />
+      </section>
       {/* Contact */}
     </div>
   );
