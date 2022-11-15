@@ -33,7 +33,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
-# last checked 
+# last checked
 
 1 hour
+
+# Sanity
+
+cd sanity
+sanity start
+
+sanity deploy

@@ -14,6 +14,8 @@ import About from "../components/About";
 import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import ContactMe from "../components/ContactMe";
+import Link from "next/link";
 
 type Props = {
   pageInfo: PageInfo;
@@ -26,8 +28,8 @@ type Props = {
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <div
-      className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory
-    overflow-scroll z-0"
+      className="bg-lightBackground text-darkBlack h-screen snap-y snap-mandatory
+    overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-darkGreen/80"
     >
       <Head>
         <title>Mitchell's Portfolio</title>
@@ -38,29 +40,45 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
       {/* Hero */}
       <section id="hero" className="snap-start">
-        <Hero />
+        <Hero pageInfo={pageInfo} />
       </section>
 
       {/* About */}
       <section id="about" className="snap-center">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
 
       {/* Experiences */}
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience experiences={experiences} />
       </section>
 
       {/* Skills */}
       <section id="skills" className="snap-start">
-        <Skills />
+        <Skills skills={skills} />
       </section>
 
       {/* Projects */}
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects} />
       </section>
+
       {/* Contact */}
+      <section id="contact" className="snap-start">
+        <ContactMe />
+      </section>
+
+      <Link href="#hero">
+        <footer className="sticky bottom-5 w-full cursor-pointer">
+          <div className="flex items-center justify-center">
+            <img
+              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+              src="  https://scontent.flba1-1.fna.fbcdn.net/v/t1.6435-9/134352906_4831896543551010_6149883889908693630_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5gtiBsS5muQAX_wvn5X&_nc_ht=scontent.flba1-1.fna&oh=00_AfDtnD9hCVPELofi4o5tnqQz43vfLBIi9uqKVSHFKP0mNQ&oe=638E2F42    "
+              alt=""
+            />
+          </div>
+        </footer>
+      </Link>
     </div>
   );
 };
@@ -82,6 +100,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       socials,
     },
-    revalidate: 30,
+    revalidate: 10,
   };
 };
