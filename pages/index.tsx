@@ -16,6 +16,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import Link from "next/link";
+import { HomeIcon } from "@heroicons/react/24/solid";
 
 type Props = {
   pageInfo: PageInfo;
@@ -71,11 +72,9 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
-            <img
-              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              src="  https://scontent.flba1-1.fna.fbcdn.net/v/t1.6435-9/134352906_4831896543551010_6149883889908693630_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5gtiBsS5muQAX_wvn5X&_nc_ht=scontent.flba1-1.fna&oh=00_AfDtnD9hCVPELofi4o5tnqQz43vfLBIi9uqKVSHFKP0mNQ&oe=638E2F42    "
-              alt=""
-            />
+            <div className="h-10 w-10 bg-darkGreen/80 rounded-full flex items-center justify-center">
+              <HomeIcon className="h-7 w-17 pb-0.5 hover:grayscale-100 text-white animate-pulse" />
+            </div>
           </div>
         </footer>
       </Link>

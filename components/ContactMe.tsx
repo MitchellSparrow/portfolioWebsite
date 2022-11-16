@@ -72,7 +72,7 @@ export default function ContactMe({}: Props) {
             placeholder="Message"
             className="contactInput"
           />
-          <button className="bg-lightGreen py-5 px-10 rounded-md text-black font-bold text-lg">
+          <button className="bg-lightGreen py-5 px-10 rounded-lg text-white font-bold text-lg">
             {" "}
             Submit
           </button>

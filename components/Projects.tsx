@@ -25,15 +25,15 @@ export default function Projects({ projects }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className=" h-64 xl:h-80 md:h-72"
+              className=" h-64 xl:h-80 md:h-72 object-contain"
               src={urlFor(project?.image).url()}
               alt=""
             />
 
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
-                <span className="underline decoration-[#F7AB0A]/50">
-                  Case study {i + 1}:
+                <span className="underline decoration-darkGreen/50">
+                  Project {i + 1}:
                 </span>{" "}
                 {project?.title}
               </h4>
