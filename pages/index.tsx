@@ -33,7 +33,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
     overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-darkGreen/80"
     >
       <Head>
-        <title>Mitchell's Portfolio</title>
+        <title>Mitchells Portfolio</title>
       </Head>
 
       {/* Header */}
@@ -85,11 +85,11 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experience[] = await fetchExperiences();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Project[] = await fetchProjects();
-  const socials: Social[] = await fetchSocials();
+  const pageInfo = await fetchPageInfo();
+  const experiences = await fetchExperiences();
+  const skills = await fetchSkills();
+  const projects = await fetchProjects();
+  const socials = await fetchSocials();
 
   return {
     props: {
