@@ -13,7 +13,7 @@ export default function ExperienceCard({ experience }: Props) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2 }}
-        className="w-28 h-28 md:w-28 md:h-28 rounded-full xl:w-[150px] xl:h-[150px] mb-2  object-cover object-center"
+        className="w-28 h-28 md:w-28 md:h-28 rounded-full xl:w-[150px] xl:h-[150px] mb-2 object-cover object-center"
         src={urlFor(experience?.companyImage).url()}
         alt=""
       />
@@ -34,13 +34,13 @@ export default function ExperienceCard({ experience }: Props) {
             />
           ))}
         </div>
-        <p className="uppercase py-5 text-gray-500 text-sm md:text-lg">
+        <p className="uppercase py-3 md:py-5 text-gray-500 text-sm md:text-lg">
           {new Date(experience?.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"
             : new Date(experience?.dateEnded).toDateString()}
         </p>
-        <ul className="list-disc text-black max-h-48 space-y-4 ml-5 text-sm md:text-lg   overflow-y-scroll pr-5 scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-darkGreen/80">
+        <ul className="list-disc text-black max-h-48 space-y-4 ml-0 text-sm md:text-lg   overflow-y-scroll pr-5 scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-darkGreen/80">
           {experience?.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
