@@ -51,7 +51,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <title>Mitchs Portfolio</title>
+        <title>{"Mitch's Portfolio"}</title>
       </Head>
 
       {/* Header */}
