@@ -17,6 +17,7 @@ import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import Link from "next/link";
 import { HomeIcon } from "@heroicons/react/24/solid";
+import Script from "next/script";
 
 type Props = {
   pageInfo: PageInfo;
@@ -53,6 +54,19 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <link rel="manifest" href="/site.webmanifest" />
         <title>{"Mitch's Portfolio"}</title>
       </Head>
+
+      {/* Google Analytics */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-LV1LN9VBT0"
+      ></Script>
+      <Script>
+        {`window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
+           gtag('config', 'G-LV1LN9VBT0')`}
+        ;
+      </Script>
 
       {/* Header */}
       <Header socials={socials} />
