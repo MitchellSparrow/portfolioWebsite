@@ -57,10 +57,10 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
       {/* Google Analytics */}
       <Script
-        async
         src="https://www.googletagmanager.com/gtag/js?id=G-LV1LN9VBT0"
+        strategy="afterInteractive"
       ></Script>
-      <Script>
+      <Script id="google-analytics" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || [];
            function gtag(){dataLayer.push(arguments);}
            gtag('js', new Date());
